@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaginent Downloads</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000080;
+            font-family: "Comic Sans MS", cursive;
+            color: #ffffff;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .downloads-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #00ffff;
+            text-shadow: 2px 2px #0000ff;
+            margin-bottom: 30px;
+        }
+
+        .download-item {
+            background: #0000ff;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.3s;
+        }
+
+        .download-item:hover {
+            transform: scale(1.05);
+            background: #0000cc;
+        }
+
+        .cd-icon {
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            border-radius: 50%;
+            position: relative;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .download-info {
+            flex-grow: 1;
+            margin: 0 20px;
+            text-align: left;
+        }
+
+        .download-title {
+            font-size: 18px;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .download-size {
+            font-size: 14px;
+            color: #00ffff;
+        }
+
+        .download-button {
+            background: #00ffff;
+            color: #000080;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Comic Sans MS", cursive;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .download-button:hover {
+            background: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .download-counter {
+            margin-top: 20px;
+            padding: 10px;
+            background: #000;
+            border: 2px solid #00ffff;
+            display: inline-block;
+            font-family: "Courier New", monospace;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: #00ffff;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="downloads-container">
+        <h1>🌟 Download Zone 🌟</h1>
+        
+        <div class="download-item">
+            <div class="cd-icon"></div>
+            <div class="download-info">
+                <h3 class="download-title">Cool Animation Pack #1</h3>
+                <div class="download-size">Size: 2.4 MB</div>
+            </div>
+            <button class="download-button" onclick="downloadFile(1)">Download!</button>
+        </div>
+
+        <div class="download-item">
+            <div class="cd-icon"></div>
+            <div class="download-info">
+                <h3 class="download-title">Awesome GIF Collection</h3>
+                <div class="download-size">Size: 1.8 MB</div>
+            </div>
+            <button class="download-button" onclick="downloadFile(2)">Download!</button>
+        </div>
+
+        <div class="download-item">
+            <div class="cd-icon"></div>
+            <div class="download-info">
+                <h3 class="download-title">Retro Animation Tools</h3>
+                <div class="download-size">Size: 3.2 MB</div>
+            </div>
+            <button class="download-button" onclick="downloadFile(3)">Download!</button>
+        </div>
+
+        <div class="download-counter">
+            Total Downloads: <span id="download-count">0</span>
+        </div>
+
+        <a href="animaginent.html" class="back-link">← Back to Main Page</a>
+    </div>
+
+    <script>
+        let downloadCount = 0;
+        const countElement = document.getElementById('download-count');
+
+        function downloadFile(id) {
+            downloadCount++;
+            countElement.textContent = downloadCount;
+            
+            // Simulate download
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = 'Downloading...';
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.textContent = 'Downloaded!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                }, 2000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html> 

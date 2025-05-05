@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaginent Links</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #800080;
+            font-family: "Comic Sans MS", cursive;
+            color: #ffffff;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .links-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff00ff;
+            text-shadow: 2px 2px #800080;
+            margin-bottom: 30px;
+        }
+
+        .webring {
+            background: #000;
+            border: 2px solid #ff00ff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .webring-title {
+            color: #ff00ff;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .webring-links {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+
+        .webring-link {
+            color: #00ffff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #00ffff;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .webring-link:hover {
+            background: #00ffff;
+            color: #000;
+        }
+
+        .friend-links {
+            margin-top: 30px;
+        }
+
+        .friend-link {
+            display: block;
+            background: #ff00ff;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .friend-link:hover {
+            transform: scale(1.05);
+            background: #ff69b4;
+        }
+
+        .friend-link::before {
+            content: '🌟';
+            position: absolute;
+            left: -30px;
+            animation: slide 3s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { left: -30px; }
+            100% { left: calc(100% + 30px); }
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: #ff00ff;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .new-badge {
+            background: #ff0000;
+            color: #ffffff;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="links-container">
+        <h1>🌟 Cool Links 🌟</h1>
+
+        <div class="webring">
+            <div class="webring-title">Animation Web Ring</div>
+            <div class="webring-links">
+                <a href="#" class="webring-link">← Previous</a>
+                <a href="#" class="webring-link">Random</a>
+                <a href="#" class="webring-link">Next →</a>
+            </div>
+        </div>
+
+        <div class="friend-links">
+            <a href="#" class="friend-link">Cool Animations Site <span class="new-badge">NEW!</span></a>
+            <a href="#" class="friend-link">GIF Paradise</a>
+            <a href="#" class="friend-link">Animation World</a>
+            <a href="#" class="friend-link">Retro Animations <span class="new-badge">NEW!</span></a>
+            <a href="#" class="friend-link">The Animation Zone</a>
+        </div>
+
+        <a href="animaginent.html" class="back-link">← Back to Main Page</a>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaginent - Your Animation Paradise!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000000 url('https://web.archive.org/web/20090830031412/http://geocities.com/Area51/Corridor/5177/stars.gif');
+            font-family: "Comic Sans MS", cursive;
+            color: #ffffff;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            padding: 20px;
+            border: 5px solid #ffff00;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            animation: rainbow 3s infinite;
+        }
+
+        @keyframes rainbow {
+            0% { border-color: #ff0000; }
+            20% { border-color: #ffff00; }
+            40% { border-color: #00ff00; }
+            60% { border-color: #00ffff; }
+            80% { border-color: #ff00ff; }
+            100% { border-color: #ff0000; }
+        }
+
+        h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px #ff0000,
+                         4px 4px #00ff00,
+                         6px 6px #0000ff;
+            margin: 0;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .welcome-text {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #ffff00;
+            text-shadow: 2px 2px #ff0000;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .menu-item {
+            background: #ff00ff;
+            padding: 10px 20px;
+            border: 3px solid #ffff00;
+            border-radius: 5px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.1);
+            background: #00ffff;
+        }
+
+        .counter {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: #000000;
+            border: 2px solid #ff0000;
+            padding: 5px;
+            font-family: "Courier New", monospace;
+        }
+
+        .construction {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            animation: rotate 2s infinite linear;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .marquee {
+            background: #000000;
+            color: #00ff00;
+            padding: 10px;
+            margin: 20px 0;
+            border: 2px solid #ff0000;
+            font-family: "Courier New", monospace;
+        }
+
+        .badges {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .badge {
+            background: #ffffff;
+            padding: 5px;
+            border: 1px solid #000000;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ Animaginent ✨</h1>
+        </div>
+        
+        <div class="welcome-text">
+            Welcome to the <span class="blink">COOLEST</span> Animation Website on the Web!
+        </div>
+
+        <div class="marquee">
+            <marquee scrollamount="5">🌟 Welcome to Animaginent! The #1 Animation Site on the Web! Sign our Guestbook! 🌟</marquee>
+        </div>
+
+        <div class="menu">
+            <a href="enter.html" class="menu-item">Enter Site</a>
+            <a href="guestbook.html" class="menu-item">Guestbook</a>
+            <a href="downloads.html" class="menu-item">Downloads</a>
+            <a href="links.html" class="menu-item">Links</a>
+        </div>
+
+        <div class="welcome-text">
+            Best viewed in Netscape Navigator at 800x600 resolution
+        </div>
+    </div>
+
+    <div class="badges">
+        <div class="badge">Made with Notepad</div>
+        <div class="badge">Best viewed in IE6</div>
+    </div>
+
+    <div class="counter">
+        Visitors: 000,001
+    </div>
+
+    <div class="construction">
+        🚧 Under Construction 🚧
+    </div>
+</body>
+</html> 
